@@ -1,0 +1,11 @@
+{
+  "name": "v-tris-server",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "app": "cd server && npm run start:app"
+  },
+  "dependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
