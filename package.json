@@ -4,8 +4,5 @@
   "main": "app.js",
   "scripts": {
     "app": "cd server && npm run start:app"
-  },
-  "dependencies": {
-    "nodemon": "^2.0.16"
   }
 }
