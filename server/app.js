@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 
 const authRouter = require("./routes/auth");
+const todoRouter = require("./routes/todo");
 
 const app = express();
 app.use(require("cors")());
@@ -26,5 +27,6 @@ app.use(express.json({
 }));
 
 app.use("/auth", authRouter);
+app.use("/todo", todoRouter);
 
 startServer();

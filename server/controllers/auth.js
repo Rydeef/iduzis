@@ -64,7 +64,7 @@ module.exports.register = async (req, res) => {
     await user.save();
 
     res.status(201).json({
-      message: "A confirmation email has been sent to your email",
+      message: "User created",
     });
   } catch (e) {
     res.status(500).json({
@@ -94,7 +94,7 @@ module.exports.login = async (req, res) => {
     if (!passIsMatch) {
       return res.status(400).json({
         message: "Invalid password, try again"
-      }); 
+      });
     }
 
     const token = service.generateAccessToken({
@@ -103,7 +103,7 @@ module.exports.login = async (req, res) => {
 
     res.status(200).json({
       token: "Bearer " + token,
-      userName: username
+      username
     });
   } catch (e) {
     return res.status(500).json({
@@ -111,4 +111,3 @@ module.exports.login = async (req, res) => {
     });
   }
 };
-
