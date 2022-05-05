@@ -3,24 +3,24 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import cn from 'classnames';
+import SignInPage from "./pages/SignInPage";
+import LoggedIn from "./pages/LoggedIn";
+import Home from "./pages/Home";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App w-full">
       <Router>
         <div>
           <Switch>
-            <Route path="/about">
-              <div></div>
+            <Route path="/login">
+              <SignInPage/>
             </Route>
-            <Route path="/users">
-              <div className={cn("text-9xl flex text-blue")}>
-                dfdfdff
-              </div>
+            <Route path="/register">
+              <LoggedIn/>
             </Route>
             <Route path="/">
-              <div></div>
+              <Home/>
             </Route>
           </Switch>
         </div>

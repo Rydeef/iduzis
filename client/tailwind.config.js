@@ -11,7 +11,9 @@ module.exports = {
         },
         extend: {
             colors: {
-                'blue': '#243c5a',
+                'blue': '#077bf7',
+                'yellow': '#fcba03',
+                'lightBlue': '#3b96f7'
             },
         },
         plugins: [],
