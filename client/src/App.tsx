@@ -5,7 +5,7 @@ import Home from "./pages/Home/Home";
 
 function App() {
   return (
-    <div className="App w-full">
+    <div className="App w-full h-full">
       <Router>
         <div>
           <Switch>

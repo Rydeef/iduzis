@@ -2,7 +2,7 @@ import Calendar from "./Calendar";
 
 const HomeContainer = () => {
   return (
-    <div>
+    <div className="w-full bg-gray1 px-6 h-full">
       <Calendar/>
     </div>
   )

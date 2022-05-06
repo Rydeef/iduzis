@@ -6,7 +6,10 @@
     "start": "node app.js",
     "server": "nodemon app.js",
     "start:app": "concurrently \"npm run server\" \"npm run client\"",
-    "client": "cd .. && cd client && npm run start"
+    "client": "cd .. && cd client && npm run start",
+    "start:update": "concurrently \"npm run update:server\" \"npm run update:client\"",
+    "update:server": "yarn install",
+    "update:client": "cd .. && cd client && yarn install"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
