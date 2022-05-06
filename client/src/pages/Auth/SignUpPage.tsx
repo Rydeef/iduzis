@@ -1,10 +1,10 @@
-import LoginForm from "../components/form/LoginForm";
+import LoginForm from "../../components/form/LoginForm";
 
-const LoggedIn = () => {
+const SignUp = () => {
   return (
     <div className="w-fit mx-auto bg-slate-300 rounded-lg px-14 py-10 mt-28">
       <LoginForm/>
     </div>
   )
 }
-export default LoggedIn;
+export default SignUp;

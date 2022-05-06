@@ -37,9 +37,10 @@ const RegisterForm = () => {
     <FormikProvider value={formik}>
       <form onSubmit={formik.handleSubmit}>
         <div className="w-72">
-          <TextInput label="First Name" name="firstName"/>
+          <TextInput label="Username" name="username"/>
           <TextInput label="Email" name="email" type="email"/>
           <TextInput label="Password" name="password" type='password'/>
+          <TextInput label="Confirm Password" name="confirmPassword" type='password'/>
           <CustomButton className="mt-4" type="submit">Submit</CustomButton>
         </div>
       </form>

@@ -1,11 +1,7 @@
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
-import SignInPage from "./pages/SignInPage";
-import LoggedIn from "./pages/LoggedIn";
-import Home from "./pages/Home";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import SignInPage from "./pages/Auth/SignInPage";
+import SignUp from "./pages/Auth/SignUpPage";
+import Home from "./pages/Home/Home";
 
 function App() {
   return (
@@ -14,13 +10,13 @@ function App() {
         <div>
           <Switch>
             <Route path="/login">
-              <SignInPage/>
+              <SignUp />
             </Route>
             <Route path="/register">
-              <LoggedIn/>
+              <SignInPage />
             </Route>
             <Route path="/">
-              <Home/>
+              <Home />
             </Route>
           </Switch>
         </div>

@@ -1,8 +1,7 @@
-import {FC} from "react";
-import RegisterForm from "../components/form/RegisterForm";
+import RegisterForm from "../../components/form/RegisterForm";
 
 
-const SignInPage: FC = () => {
+const SignInPage = () => {
   return (
     <div className="w-fit mx-auto bg-slate-300 rounded-lg px-14 py-10 mt-28">
       <RegisterForm/>

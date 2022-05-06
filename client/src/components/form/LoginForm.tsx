@@ -1,31 +1,31 @@
-import {Button} from "@mui/material";
-import {FormikProvider, useFormik} from "formik";
-import * as Yup from 'yup';
-import YupPassword from 'yup-password'
+import { Button } from "@mui/material";
+import { FormikProvider, useFormik } from "formik";
+import * as Yup from "yup";
+import YupPassword from "yup-password";
 import CustomButton from "../../sharedComponents/formComponent/CustomButton";
-import {TextInput} from "../../sharedComponents/formComponent/TextField";
+import { TextInput } from "../../sharedComponents/formComponent/TextField";
 
-YupPassword(Yup)
+YupPassword(Yup);
 
 const validationSchema = Yup.object().shape({
-  email: Yup.string().email('Invalid email').required('Required'),
+  username: Yup.string().email("Invalid email").required("Required"), // validation remake
   password: Yup.string()
-    .min(2, 'Too Short!')
-    .max(50, 'Too Long!')
+    .min(2, "Too Short!")
+    .max(50, "Too Long!")
     .password()
-    .required('Required'),
+    .required("Required"),
 });
 
 const LoginForm = () => {
   const formik = useFormik({
     validationSchema,
     initialValues: {
-      firstName: '',
-      email: '',
-      password: ''
+      firstName: "",
+      email: "",
+      password: "",
     },
-    onSubmit: values => {
-      console.log(values)
+    onSubmit: (values) => {
+      console.log(values);
     },
   });
 
@@ -33,12 +33,14 @@ const LoginForm = () => {
     <FormikProvider value={formik}>
       <form onSubmit={formik.handleSubmit}>
         <div className="w-72">
-          <TextInput label="Email" name="email" type="email"/>
-          <TextInput label="Password" name="password" type='password'/>
-          <CustomButton className="mt-4" type="submit">Submit</CustomButton>
+          <TextInput label="Username" name="username" type="username" />
+          <TextInput label="Password" name="password" type="password" />
+          <CustomButton className="mt-4" type="submit">
+            Submit
+          </CustomButton>
         </div>
       </form>
     </FormikProvider>
   );
-}
+};
 export default LoginForm;
