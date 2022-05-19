@@ -14,7 +14,7 @@ export const TextInput: FC<Props> = ({label, type, ...props}) => {
   return (
     <div>
       <TextField className='w-full' type={type || 'text'} error={isError} id="standard-basic" label={label}
-                 variant="standard" {...field}/>
+                 variant="standard" {...field} autoComplete='off'/>
       {isError && (
         <div className="error text-sm text-red-600 ">{error}</div>
       )}

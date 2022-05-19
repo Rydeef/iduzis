@@ -30,7 +30,7 @@ const Index = () => {
   }
 
   return (
-    <div className="rounded-xl bg-white w-max h-max">
+    <div className="mx-auto sm:mx-0 rounded-xl bg-white w-max h-max mt-3">
       <DayPicker
         defaultMonth={new Date()}
         showOutsideDays

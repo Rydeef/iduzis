@@ -8,7 +8,7 @@ import {TextInput} from "../../sharedComponents/formComponent/TextField";
 YupPassword(Yup)
 
 const validationSchema = Yup.object().shape({
-  firstName: Yup.string()
+  username: Yup.string()
     .min(2, 'Too Short!')
     .max(50, 'Too Long!')
     .required('Required'),
@@ -24,7 +24,7 @@ const RegisterForm = () => {
   const formik = useFormik({
     validationSchema,
     initialValues: {
-      firstName: '',
+      username: '',
       email: '',
       password: ''
     },

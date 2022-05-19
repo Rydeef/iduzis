@@ -7,12 +7,12 @@ interface Props {
   type?: 'button' | "submit" | "reset" | undefined;
 }
 
-const CustomButton: FC<Props> = ({children, className, type}) => {
+const CustomButton: FC<Props> = ({children, className, type = 'button'}) => {
 
   return (
     <button
-      type={type || 'button'}
-      className={cn('bg-blue hover:bg-lightBlue text-white font-bold py-2 px-4 rounded', className)}>
+      type={type}
+      className={cn('bg-blue hover:opacity-90 text-white font-bold py-2 px-4 rounded', className)}>
       {children}
     </button>
   );

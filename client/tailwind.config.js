@@ -10,11 +10,13 @@ module.exports = {
     },
     extend: {
       colors: {
-        'blue': '#077bf7',
+        'blue': 'rgb(25, 118, 210)',
         'yellow': '#fcba03',
-        'lightBlue': '#3b96f7',
+        'lightBlue': 'rgb(204, 226, 255)',
         'gray1': '#ded9d9',
         'gray2': '#949292',
+        'lightGray': 'rgba(25, 118, 210, 0.04)'
+
       },
     },
     plugins: [],
