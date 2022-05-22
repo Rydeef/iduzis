@@ -34,7 +34,7 @@ const NewTaskForm:FC<Props> = ({onSubmit}) => {
                 <div className="w-72">
                     <TextInput label="Task" name="task" />
                     <CustomButton className="mt-4" type="submit">
-                        Submit
+                       Add new task
                     </CustomButton>
                 </div>
             </form>

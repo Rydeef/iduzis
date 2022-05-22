@@ -34,8 +34,8 @@ const LoginForm = () => {
         <div className="w-72">
           <TextInput label="Username" name="username" type="username" />
           <TextInput label="Password" name="password" type="password" />
-          <CustomButton className="mt-4" type="submit">
-            Submit
+          <CustomButton className="mt-4 w-full" type="submit">
+            Log in
           </CustomButton>
         </div>
       </form>

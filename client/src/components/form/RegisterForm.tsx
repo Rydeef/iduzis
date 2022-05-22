@@ -36,12 +36,12 @@ const RegisterForm = () => {
   return (
     <FormikProvider value={formik}>
       <form onSubmit={formik.handleSubmit}>
-        <div className="w-72">
+        <div className="w-72 flex flex-col justify-center">
           <TextInput label="Username" name="username"/>
           <TextInput label="Email" name="email" type="email"/>
           <TextInput label="Password" name="password" type='password'/>
           <TextInput label="Confirm Password" name="confirmPassword" type='password'/>
-          <CustomButton className="mt-4" type="submit">Submit</CustomButton>
+          <CustomButton className="mt-4 px-5 w-full bg-blue" type="submit">Register</CustomButton>
         </div>
       </form>
     </FormikProvider>
